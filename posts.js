@@ -16,14 +16,22 @@ export const initialiState = {
     posts: []
 }
 
-export function reducer (state, action) {
+export function reducer(state, action) {
+    let ris = {}
     switch (action.type) {
-        case types.LOADING:
-            return { ...state, loading: true }
+        case types.LOADING: {
+            ris = { ...state, loading: true } 
+            console.log(ris)
+            return ris
+        }
         case types.SUCCESS:
-            return { ...state, loading: false, posts: action.payload }
+            ris = { ...state, loading: false, posts: action.payload }
+            console.log(ris)
+            return ris
         case types.FAILURE:
-            return { ...state, loading: false, error: true }
+            ris = { ...state, loading: false, error: true }
+            console.log(ris)
+            return ris
     }
 }
 
