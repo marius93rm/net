@@ -16,7 +16,7 @@ export const initialiState = {
     posts: []
 }
 
-export const reducer = (state, action) => {
+export function reducer (state, action) {
     switch (action.type) {
         case types.LOADING:
             return { ...state, loading: true }

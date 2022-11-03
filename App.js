@@ -5,6 +5,7 @@ import { actionCreators, reducer, initialState } from './posts';
 
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  console.log(typeof(state))
 
   useEffect(() => {
     async function fetchPosts() {
